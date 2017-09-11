@@ -43,9 +43,9 @@ int main(int argc,char *argv[])
 
 	if (N > 0 && N <= 1000000)
 	{
-		srand(unsigned int(time(NULL))); //³õÊ¼»¯ÖÖ×ÓÎªµ±Ç°Ê±¼ä
-		bool retry;//ÖØÊÔ
-		int retry_count = 0;//ÖØÊÔ´ÎÊý
+		srand(unsigned int(time(NULL))); //åˆå§‹åŒ–ç§å­ä¸ºå½“å‰æ—¶é—´
+		bool retry;//é‡è¯•
+		int retry_count = 0;//é‡è¯•æ¬¡æ•°
 		for (int i = 0; i < N; )
 		{
 			retry = false;
@@ -66,7 +66,7 @@ int main(int argc,char *argv[])
 			}
 			if (!retry)
 			{
-				//cout << "µÚ"<<i+1<<"¸ö¾ØÕó"<<"ÖØÊÔ" << retry_count << "´Î" << endl;
+				//cout << "ç¬¬"<<i+1<<"ä¸ªçŸ©é˜µ"<<"é‡è¯•" << retry_count << "æ¬¡" << endl;
 				//print_sudoku(sudoku);
 				for (int x = 0; x < 9; x++)
 				{
@@ -75,7 +75,7 @@ int main(int argc,char *argv[])
 						outfile << sudoku[x][y] << ' ';
 					}
 					outfile << endl;
-				}//Êä³öÒ»¸öÊý¶À¾ØÕó
+				}//è¾“å‡ºä¸€ä¸ªæ•°ç‹¬çŸ©é˜µ
 				outfile << endl;
 				retry_count = 0; 
 				i++;
@@ -83,7 +83,7 @@ int main(int argc,char *argv[])
 			else
 			{
 				retry_count++;
-			}//ÎÞ½âÖØÊÔ
+			}//æ— è§£é‡è¯•
 
 			/*retry = false;
 			if (i == 0)
@@ -106,7 +106,7 @@ int main(int argc,char *argv[])
 			}
 			if (!retry)
 			{
-				cout << "µÚ" << i + 1 << "¸ö¾ØÕó" << "ÖØÊÔ" << retry_count << "´Î" << endl;
+				cout << "ç¬¬" << i + 1 << "ä¸ªçŸ©é˜µ" << "é‡è¯•" << retry_count << "æ¬¡" << endl;
 				Output_Sudoku(sudoku, outfile);
 				retry_count = 0;
 				i++;
@@ -119,6 +119,5 @@ int main(int argc,char *argv[])
 		outfile.close();
 	}
 	else cout << "Please give me a proper number" << endl;
-	system("pause");
 	return 0;
 }
